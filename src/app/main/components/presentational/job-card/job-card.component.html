@@ -1,0 +1,33 @@
+<div class="job-container">
+  <div class="image-wrapper">
+    <img src="../../../assets/{{ job.logo }}" alt="">
+  </div>
+  <div class="info-wrapper">
+    <div class="job-details">
+      <div class="job-company-details">
+        <div class="company-name">{{ job.company }}</div>
+        <div *ngIf="job.new;" class="new">
+          <div>New!</div>
+        </div>
+        <div *ngIf="job.featured;" class="featured">
+          <div>Featured</div>
+        </div>
+      </div>
+      <div class="job-position">{{ job.position }}</div>
+      <div class="job-work-details">
+        <div>{{ job.postedAt }}</div>
+        <div>{{ job.contract }}</div>
+        <div>{{ job.location }}</div>
+      </div>
+    </div>
+    <div class="job-languages">
+      <div
+        *ngFor="let language of job.languages"
+        class="language"
+      >
+        {{ language }}
+      </div>
+    </div>
+  </div>
+
+</div>

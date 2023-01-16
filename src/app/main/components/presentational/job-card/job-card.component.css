@@ -1,0 +1,115 @@
+.job-container {
+  height: 100px;
+  background-color: white;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.job-container:nth-child(3) {
+  border-left: 3px solid black;
+}
+
+.job-container .image-wrapper img {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: -30px;
+  left: 15px;
+}
+
+.job-container .info-wrapper {
+  width: 100%;
+}
+
+.job-container .info-wrapper .job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.job-container .info-wrapper .job-details .job-company-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.job-container .info-wrapper .job-details .job-company-details .company-name {
+  color: var(--desaturated-dark-cyan);
+}
+
+.job-container .info-wrapper .job-details .job-company-details .new {
+  color: white;
+  background-color: var(--desaturated-dark-cyan);
+  padding: 3px 5px;
+  border-radius: 10px;
+  /*text-align: center;*/
+}
+
+.job-container .info-wrapper .job-details .job-company-details .featured {
+  color: white;
+  background-color: var(--very-dark-grayish-cyan);
+  padding: 3px 5px;
+  border-radius: 10px;
+  /*text-align: center;*/
+}
+
+.job-container .info-wrapper .job-details .job-position {
+  font-weight: 800;
+  /*padding-top: 7px;*/
+}
+
+.job-container .info-wrapper .job-details .job-work-details {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: var(--dark-grayish-cyan);
+}
+
+.job-container .info-wrapper .job-languages div {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.job-container .info-wrapper .job-languages div {
+  background-color: var(--background-color);
+  color: var(--desaturated-dark-cyan);
+}
+
+@media screen and (min-width: 600px) {
+  .job-container {
+    height: 100px;
+    padding: 30px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .job-container .image-wrapper img {
+    width: 70px;
+    height: 70px;
+    position: static;
+    top: 0;
+    left: 0;
+  }
+
+  .job-container .info-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .job-container .info-wrapper .job-languages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+}
