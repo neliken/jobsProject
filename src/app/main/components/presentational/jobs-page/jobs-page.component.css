@@ -3,15 +3,89 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  width: 90%;
-  margin-top: 300px;
+  width: 100%;
+  margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
-  /*margin-bottom: 200px;*/
+}
+
+.jobs-container .job-container {
+  margin: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.jobs-container .job-container:nth-child(1)::ng-deep .job-container,
+.jobs-container .job-container:nth-child(2)::ng-deep .job-container {
+  border-left: 5px solid var(--desaturated-dark-cyan);
+  border-radius: 5px;
+}
+
+.jobs-container .filter-field {
+  width: 90%;
+  background-color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 30px;
+  color: var(--desaturated-dark-cyan);
+}
+
+.jobs-container .filter-field div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 5px;
+  gap: 10px;
+}
+
+.jobs-container .filter-field .filter {
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--desaturated-dark-cyan);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobs-container .filter-field .filter svg {
+  height: 15px;
+  width: 15px;
+  background-color: var(--desaturated-dark-cyan);
+  color: white;
+  padding: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.jobs-container .filter-field .filter svg:hover {
+  background-color: black;
+}
+
+.jobs-container .filter-field .clear:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 600px) {
   .jobs-container {
-    width: 80%;
+    width: 70%;
+    display: block;
+    margin-top: 150px;
+  }
+
+  .jobs-container .filter-field {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .jobs-container .job-container {
+    margin: 10px;
   }
 }

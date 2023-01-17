@@ -7,25 +7,34 @@
       <div class="job-company-details">
         <div class="company-name">{{ job.company }}</div>
         <div *ngIf="job.new;" class="new">
-          <div>New!</div>
+          <div>NEW!</div>
         </div>
         <div *ngIf="job.featured;" class="featured">
-          <div>Featured</div>
+          <div>FEATURED</div>
         </div>
       </div>
       <div class="job-position">{{ job.position }}</div>
       <div class="job-work-details">
         <div>{{ job.postedAt }}</div>
+        <div class="dot"></div>
         <div>{{ job.contract }}</div>
+        <div class="dot"></div>
         <div>{{ job.location }}</div>
       </div>
     </div>
-    <div class="job-languages">
-      <div
-        *ngFor="let language of job.languages"
-        class="language"
+    <hr>
+    <div class="job-info">
+      <div (click)="addFilter($event)">{{ job.role }}</div>
+      <div (click)="addFilter($event)">{{ job.level }}</div>
+      <div *ngFor="let language of job.languages"
+           (click)="addFilter($event)"
       >
         {{ language }}
+      </div>
+      <div *ngFor="let tool of job.tools"
+           (click)="addFilter($event)"
+      >
+        {{ tool }}
       </div>
     </div>
   </div>

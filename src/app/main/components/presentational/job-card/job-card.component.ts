@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Job} from "../../../../job";
 
 @Component({
@@ -9,4 +9,12 @@ import {Job} from "../../../../job";
 export class JobCardComponent {
   @Input()
   public job!: Job;
+
+  @Output()
+  public onFilterChange = new EventEmitter<any>();
+
+  addFilter(value: any) {
+    const filterName = value.target.innerText;
+    this.onFilterChange.emit(filterName);
+  }
 }
